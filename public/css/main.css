@@ -1,0 +1,62 @@
+html, body, .main-container{
+	height: 100vh;
+}
+
+body {
+
+}
+
+weak {
+	font-weight: lighter;
+}
+
+.content-section {
+	margin-top: 10px;
+}
+
+
+
+@media (min-width: 1000px) {
+
+	.content-section {
+		padding-left: 225px;
+		height: 100%;
+		width: 100%;
+		overflow-y: scroll; 
+	}
+
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+
+	.content-section {
+		margin-left: 10px;
+	}
+
+}
+
+/* Palette URL: http://paletton.com/#uid=73r1H0kwi++bu++hX++++rd++kX */
+
+.color-primary-0 { color: #0BB6FF }	/* Main Primary color */
+.color-primary-1 { color: #A8E5FF }
+.color-primary-2 { color: #76D6FF }
+.color-primary-3 { color: #005F89 }
+.color-primary-4 { color: #004969 }
+
+.color-secondary-1-0 { color: #FF00A0 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #FFA4DD }
+.color-secondary-1-2 { color: #FF70CA }
+.color-secondary-1-3 { color: #A9006A }
+.color-secondary-1-4 { color: #820052 }
+
+.color-secondary-2-0 { color: #B3FF00 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #E4FFA4 }
+.color-secondary-2-2 { color: #D4FF70 }
+.color-secondary-2-3 { color: #8FCC00 }
+.color-secondary-2-4 { color: #6E9D00 }
+
+.color-complement-0 { color: #FF8700 }	/* Main Complement color */
+.color-complement-1 { color: #FFD4A4 }
+.color-complement-2 { color: #FFBC70 }
+.color-complement-3 { color: #D97300 }
+.color-complement-4 { color: #A75800 }

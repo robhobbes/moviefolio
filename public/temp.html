@@ -1,0 +1,14 @@
+<section class="add-movie-section" ng-controller="MovieSearchCtrl as searchCtrl">
+  <form ng-submit="searchCtrl.search()" class="form-inline movie-search-form">
+    <input type="text" name="search" ng-model="searchCtrl.queryString" class="form-control">
+    <input type="submit" class="btn btn-primary" value="Search">
+  </form>
+  <ul class="list-unstyled" ng-repeat="movie in searchCtrl.results">
+    <li>
+      <img ng-src="{{movie.Poster}}">
+      <span ng-bind="movie.Title"></span>
+      <span ng-bind="movie.Year"></span>
+      <span ng-bind="movie.Rating"></span>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,28 @@
+<form class="form-inline">
+  <input type="text" class="form-control" ng-model="listCtrl.titleFilter" placeholder="search for a title">
+  <input type="text" class="form-control" ng-model="listCtrl.categoryFilter" placeholder="search for a category">
+  <select type="select" class="form-control" ng-model="listCtrl.typeFilter"
+    ng-options="type for type in listCtrl.types">
+  </select>
+</form>
+<ul class="list-unstyled movie-list">
+  <!-- TODO make movie item a directive ??? -->
+  <li class="movie-list-item" ng-repeat="movie in listCtrl.movies | movieFilter:listCtrl.titleFilter:listCtrl.categoryFilter:listCtrl.typeFilter">
+    <div class="movie-img-wrapper">
+      <img ng-src="{{movie.poster}}" class="img-responsive movie-img">
+    </div>
+    <div class="movie-details-wrapper">
+      <header class="movie-header">
+        <span class="movie-title h4" ng-bind="movie.title"></span> <span class="h4"><small ng-bind="movie.year"></small></span>
+      </header>
+      <ul class="list-unstyled list-inline movie-vitals-list">
+        <li class="movie-detail" ng-bind="'Type: ' + movie.type"></li>
+        <li class="movie-detail" ng-bind="'Runtime: ' + movie.runtime"></li>
+        <li class="movie-detail" ng-bind="'Rating: ' + movie.rated"></li>
+      </ul>
+      <ul class="list-unstyled list-inline movie-categories-list">
+        <li ng-repeat="category in movie.categories" ng-bind="category" class="movie-category"></li>
+      </ul>
+    </div>
+  </li>
+</ul>

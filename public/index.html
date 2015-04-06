@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="moviesApp" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>Movie DB</title>
+
+  <link rel="icon" type="image/png" href="/img/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="StyleSheet" href="/css/bootstrap.min.css" type="text/css" media="screen">
+  <link rel="StyleSheet" href="/css/bootstrap-theme.min.css" type="text/css" media="screen">
+
+  <link rel="StyleSheet" href="/css/main.css" type="text/css" media="screen">
+  <link rel="StyleSheet" href="/css/header.css" type="text/css" media="screen">
+  <link rel="StyleSheet" href="/css/movie-list.css" type="text/css" media="screen">
+</head>
+<body>
+  <div class="main-container">
+    <section class="header-section">
+      <header>
+        <h1><weak>movie</weak><strong>fol.io</strong></h1>
+        <ul class="list-unstyled list-inline">
+          <li>
+            <a class="btn btn-link" href="#list">My Movies</a>
+          </li>
+          <li>
+            <a class="btn btn-link" href="#add">Add Movie</a>
+          </li>
+        </ul>
+      </header>
+    </section>
+    <section class="content-section" ng-view></section>
+    <scripts>
+      <script src="/lib/angular.min.js"></script>
+      <script src="/lib/angular-route.min.js"></script>
+      <script src="/lib/angular-ui-bootstrap.min.js"></script>
+      <script src="/js/modules.js"></script>
+      <script src="/js/controllers.js"></script>
+      <script src="/js/services.js"></script>
+      <script src="/js/filters.js"></script>
+    </scripts>
+  </div>
+</body>
+</html>
